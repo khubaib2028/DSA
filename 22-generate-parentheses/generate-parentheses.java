@@ -1,19 +1,15 @@
 class Solution {
-    public List<String> generateParenthesis(int n) {
-        List<String> ans = new ArrayList<>();
-        paren("", n, ans, 0, 0);
-        return ans;
-    }
-    private void paren(String s, int n, List<String> soln, int open, int close) {
-        if (s.length() == 2 * n) {
-            soln.add(s);
+    public void generate (int n, int l, int r, String s, List<String>ans){
+        if(r==n){//base case
+            ans.add(s);
             return;
         }
-        if (open < n) {
-            paren(s + "(", n, soln, open + 1, close);
-        }
-        if (close < open) {
-            paren(s + ")", n, soln, open, close + 1);
-        }
+        if(l<n) generate(n,l+1,r,s+"(",ans);
+        if(r<l) generate(n,l,r+1,s+")",ans);
+    }
+    public List<String> generateParenthesis(int n) {
+        List<String>ans=new ArrayList<>();
+        generate(n,0,0,"",ans);
+        return ans;
     }
 }
