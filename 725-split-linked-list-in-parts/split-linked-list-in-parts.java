@@ -38,12 +38,9 @@ class Solution {
                     curr = curr.next;
                 }
             }
-            
-
             if (prev != null) {
                 prev.next = null;
-            }
-        
+            }     
         }
         return result;
     }
