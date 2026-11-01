@@ -28,9 +28,7 @@ class Solution {
             result[i] = curr; 
             
 
-            int currentPartSize = chunkSize + (i < extra ? 1 : 0);
-            
- 
+            int currentPartSize = chunkSize + (i < extra ? 1 : 0); 
             ListNode prev = null;
             for (int j = 0; j < currentPartSize; j++) {
                 prev = curr;
