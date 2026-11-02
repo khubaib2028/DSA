@@ -28,10 +28,8 @@ class Solution {
                 int idx = stack.pop();
                 result[idx] = values.get(i); 
             }
-
             stack.push(i);
         }
-
          return result;
     }
 }
