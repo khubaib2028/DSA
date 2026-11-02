@@ -20,10 +20,7 @@ class Solution {
         int n = values.size();
         int[] result = new int[n];
         Stack<Integer> stack = new Stack<>();
-        
-
-        for (int i = 0; i < n; i++) {
-           
+        for (int i = 0; i < n; i++) {        
             while (!stack.isEmpty() && values.get(i) > values.get(stack.peek())) {
                 int idx = stack.pop();
                 result[idx] = values.get(i); 
