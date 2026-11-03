@@ -16,19 +16,14 @@ class Solution {
         }
         ListNode dummy = new ListNode(0, head);
         ListNode curr = dummy;
-        
-
         while (curr.next != null) {
             if (toDelete.contains(curr.next.val)) {
    
                 curr.next = curr.next.next;
             } else {
-
                 curr = curr.next;
             }
         }
-        
-
         return dummy.next;
     }
 }
