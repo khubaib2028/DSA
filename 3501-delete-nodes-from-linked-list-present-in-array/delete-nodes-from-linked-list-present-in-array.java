@@ -14,8 +14,6 @@ class Solution {
         for (int num : nums) {
             toDelete.add(num);
         }
-        
-
         ListNode dummy = new ListNode(0, head);
         ListNode curr = dummy;
         
