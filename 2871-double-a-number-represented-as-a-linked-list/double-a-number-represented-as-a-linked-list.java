@@ -29,14 +29,8 @@ class Solution {
         
  
         int carry = doubleRecursive(node.next);
-        
-  
         int newVal = node.val * 2 + carry;
-        
-
         node.val = newVal % 10;
-        
-
         return newVal / 10;
     }
 }
