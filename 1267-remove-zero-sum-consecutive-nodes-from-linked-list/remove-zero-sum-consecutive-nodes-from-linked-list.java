@@ -11,12 +11,9 @@
 class Solution {
     public ListNode removeZeroSumSublists(ListNode head) {
         ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        
+        dummy.next = head;   
         int prefixSum = 0;
         Map<Integer, ListNode> map = new HashMap<>();
-        
-
         ListNode curr = dummy;
         while (curr != null) {
             prefixSum += curr.val;
