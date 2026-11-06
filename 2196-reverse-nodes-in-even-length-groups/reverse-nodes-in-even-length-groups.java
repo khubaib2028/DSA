@@ -42,17 +42,13 @@ class Solution {
                 prev.next = q;
           
                 prev = groupStart;
-            } else {
-               
+            } else {         
                 for (int i = 0; i < actualSize; i++) {
                     prev = prev.next;
                 }
-            }
-            
-        
+            }    
             groupSize++;
-        }
-        
+        }   
         return head;
     }
 }
