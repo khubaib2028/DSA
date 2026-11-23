@@ -1,13 +1,10 @@
 
 class ProductOfNumbers {
-
     private List<Integer> prefix;
-
     public ProductOfNumbers() {
         prefix = new ArrayList<>();
         prefix.add(1);
     }
-
     public void add(int num) {
         if (num == 0) {
             prefix.clear();
@@ -19,7 +16,6 @@ class ProductOfNumbers {
     }
     public int getProduct(int k) {
         int n = prefix.size();
-
         if (k >= n) {
             return 0;
         }
